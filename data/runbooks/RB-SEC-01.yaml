@@ -1,0 +1,27 @@
+id: RB-SEC-01
+title: Suspected phishing email
+category: Security reports
+owner: Security
+applies_when: User received or clicked a suspicious email
+pre_checks:
+- Do not open links or attachments
+steps:
+- Tell the user not to click, reply or forward the email
+- Ask the user to use the report phishing button
+- If a link was clicked, advise disconnecting the device from the network and entering no more information
+- Collect the sender, the time, the link and anything entered
+- Route to Security immediately, and mark as urgent if credentials were entered
+allowed_actions:
+- send_instructions
+- assign_to_team
+escalate_if:
+- Always escalate to Security
+- User clicked a link or entered credentials
+auto_resolvable: false
+verification:
+  status: checked_generic_guides_only
+  checked_against:
+  - 'CISA: Phishing postcard | https://www.cisa.gov/sites/default/files/publications/Phishing%20General%20Security%20Postcard_6.24.2021_508cV2.pdf'
+  - 'University of Arizona Security: How to handle suspicious emails | https://security.arizona.edu/sites/default/files/2024-09/Security-Hints-and-Tips-How-Handle-Suspicious-Emails.pdf'
+  - 'Cybersmart: What to do if you click on a phishing link | https://cybersmart.co.uk/2025/09/what-to-do-if-you-click-on-a-phishing-link'
+  notes: 'CISA advises notifying IT and following incident reporting steps. Practice varies: one university says to report only if a link was clicked. Always escalating is a deliberate benchmark rule here.'

@@ -1,0 +1,26 @@
+id: RB-SEC-03
+title: Suspicious account activity
+category: Security reports
+owner: Security
+applies_when: User sees unexpected sign-in alerts or MFA prompts they did not start
+pre_checks:
+- Do not approve unknown prompts
+steps:
+- Tell the user to deny any MFA prompt they did not start, and to use Report as fraud if offered
+- Tell the user not to share any codes
+- If the user already approved a prompt, treat it as urgent
+- Route to Security immediately
+- Password changes should follow Security's instruction
+allowed_actions:
+- assign_to_team
+escalate_if:
+- Always escalate to Security
+- Prompts continue after denial
+auto_resolvable: false
+verification:
+  status: checked_generic_guides_only
+  checked_against:
+  - 'University of Colorado Security: MFA fatigue, approving the wrong request | https://www.cu.edu/security/department-director-mfa-fatigue-approving-wrong-request'
+  - 'University of Wisconsin Information Security: MFA fatigue attacks | https://www.wisconsin.edu/information-security/2026/04/30/when-your-phone-will-not-stop-buzzing-mfa-fatigue-attacks/'
+  - 'UTMB Information Security: MFA fatigue attacks | https://www.utmb.edu/infosec/welcome-to-infosec/infosec-corner/article/information-security-corner/2026/02/03/mfa-fatigue-attacks'
+  notes: University security pages agree on deny, report, and notify the service desk if approved. Some advise changing the password right away. This runbook defers the password step to Security as a benchmark rule.

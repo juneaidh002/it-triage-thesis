@@ -1,0 +1,26 @@
+id: RB-VPN-03
+title: VPN certificate or profile error
+category: VPN and remote access
+owner: Network
+applies_when: VPN shows a certificate, profile or trust error
+pre_checks:
+- Device date and time are correct
+- Device is company managed
+steps:
+- Check the device date, time and time zone
+- Remove the old VPN profile
+- Download a fresh profile from the self-service portal
+- Restart the device and reconnect
+allowed_actions:
+- send_instructions
+escalate_if:
+- Device is not enrolled in management
+- Certificate error affects many users
+auto_resolvable: true
+escalation_note: When escalating, include when the problem started, whether others are affected, the steps already tried, and the exact error text or a screenshot
+verification:
+  status: checked_generic_guides_only
+  checked_against:
+  - 'ISCTE-IUL IT: VPN troubleshooting guide (university guide, not vendor) | https://informatica.iscte-iul.pt/?p=91863'
+  - 'Cycle.io: VPN troubleshooting guide (generic) | https://cycle.io/learn/vpn-troubleshooting'
+  notes: Generic guides only. Certificate and profile handling is vendor-specific and was not verified.

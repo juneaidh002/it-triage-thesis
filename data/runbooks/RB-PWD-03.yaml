@@ -1,0 +1,26 @@
+id: RB-PWD-03
+title: MFA code not arriving
+category: Password and MFA
+owner: Identity
+applies_when: User does not receive the MFA text or call
+pre_checks:
+- Phone has signal
+- Registered phone number is correct
+- Phone date and time are set to automatic
+steps:
+- Wait 60 seconds and request one new code only, because repeated requests can cause a temporary block
+- Check the phone is not blocking texts from unknown numbers
+- Switch to another registered method such as the authenticator app or a code in a signed-in mail app
+- Retry sign-in
+allowed_actions:
+- send_instructions
+escalate_if:
+- No registered method works, an admin must require MFA re-registration
+- Registered phone number is wrong or outdated
+- Several users do not receive codes at the same time
+auto_resolvable: true
+verification:
+  status: checked_community_answers
+  checked_against:
+  - 'Microsoft Learn Q&A (community answer): Authenticator app not getting code | https://learn.microsoft.com/en-ca/answers/questions/5826110/authenticator-app-not-getting-code'
+  notes: Source is a Microsoft Learn Q&A answer (not a formal doc page). Added the warning about repeated code requests, unknown-sender text blocking and alternate methods. Added after reviewing generated tickets (design choice, not from public documentation).

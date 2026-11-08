@@ -1,0 +1,88 @@
+- key: PWD
+  name: Password and MFA
+  owner: Identity
+  runbooks:
+  - RB-PWD-01
+  - RB-PWD-02
+  - RB-PWD-03
+  - RB-PWD-04
+- key: ACC
+  name: Account lockout and access requests
+  owner: Identity
+  runbooks:
+  - RB-ACC-01
+  - RB-ACC-02
+  - RB-ACC-03
+  - RB-ACC-04
+- key: VPN
+  name: VPN and remote access
+  owner: Network
+  runbooks:
+  - RB-VPN-01
+  - RB-VPN-02
+  - RB-VPN-03
+  - RB-VPN-04
+- key: NET
+  name: Wi-Fi and network
+  owner: Network
+  runbooks:
+  - RB-NET-01
+  - RB-NET-02
+  - RB-NET-03
+- key: EML
+  name: Email and calendar
+  owner: Messaging
+  runbooks:
+  - RB-EML-01
+  - RB-EML-02
+  - RB-EML-03
+  - RB-EML-04
+- key: SFT
+  name: Software install and licenses
+  owner: Desktop support
+  runbooks:
+  - RB-SFT-01
+  - RB-SFT-02
+  - RB-SFT-03
+- key: HW
+  name: Laptop hardware
+  owner: Hardware
+  runbooks:
+  - RB-HW-01
+  - RB-HW-02
+  - RB-HW-03
+- key: PRT
+  name: Printers and peripherals
+  owner: Desktop support
+  runbooks:
+  - RB-PRT-01
+  - RB-PRT-02
+  - RB-PRT-03
+- key: COL
+  name: Collaboration tools
+  owner: Collaboration
+  runbooks:
+  - RB-COL-01
+  - RB-COL-02
+  - RB-COL-03
+- key: DRV
+  name: Shared drives and file access
+  owner: Storage
+  runbooks:
+  - RB-DRV-01
+  - RB-DRV-02
+  - RB-DRV-03
+- key: APP
+  name: Internal application errors
+  owner: App support
+  runbooks:
+  - RB-APP-01
+  - RB-APP-02
+  - RB-APP-03
+- key: SEC
+  name: Security reports
+  owner: Security
+  runbooks:
+  - RB-SEC-01
+  - RB-SEC-02
+  - RB-SEC-03

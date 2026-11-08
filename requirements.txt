@@ -1,0 +1,10 @@
+pyyaml
+pandas
+rank_bm25
+faiss-cpu
+sentence-transformers
+scikit-learn
+fastapi
+streamlit
+openai
+anthropic

@@ -1,0 +1,29 @@
+id: RB-PRT-01
+title: Cannot print
+category: Printers and peripherals
+owner: Desktop support
+applies_when: Print jobs do not print or stay in the queue
+pre_checks:
+- Printer is switched on
+- Paper and toner are available
+steps:
+- Run the printer troubleshooter
+- Check the printer is not set to Use Printer Offline or Pause Printing
+- Cancel stuck jobs in the print queue
+- Restart the print spooler if cancelling does not clear the queue
+- Turn the printer off for 60 seconds and restart the PC
+- Print a test page
+allowed_actions:
+- send_instructions
+- check_service_status
+escalate_if:
+- Printer is offline for all users
+- Driver error continues after the steps
+- User cannot restart the spooler on a managed device
+auto_resolvable: true
+verification:
+  status: checked_official_docs
+  checked_against:
+  - 'Microsoft Support: Troubleshooting offline printer problems in Windows | https://support.microsoft.com/help/4496876'
+  - 'Microsoft Support: Fix print job stuck in queue errors in Windows | https://support.microsoft.com/en-US/Windows/Hardware/Printer/fix-print-job-stuck-in-queue-errors-in-windows'
+  notes: Steps follow Microsoft's printer offline and stuck queue pages. The last escalation condition is my inference for managed devices, not stated in the sources.

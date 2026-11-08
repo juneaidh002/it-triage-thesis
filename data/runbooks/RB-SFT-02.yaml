@@ -1,0 +1,26 @@
+id: RB-SFT-02
+title: Software license will not activate
+category: Software install and licenses
+owner: Desktop support
+applies_when: Application shows an unlicensed or activation error
+pre_checks:
+- A license that includes the desktop apps is assigned to the user
+- User signs in with the work account, not a personal one
+steps:
+- Confirm the license is assigned to the user
+- Ask the user to sign out of the app and sign in again with the work account
+- If a license is already assigned, an admin can remove and re-add it
+- Check the user has not reached the device limit and remove unused devices
+- Run the built-in activation troubleshooter
+allowed_actions:
+- send_instructions
+escalate_if:
+- No license is available
+- Activation still fails after sign-in and license re-assignment
+auto_resolvable: true
+verification:
+  status: checked_official_docs
+  checked_against:
+  - 'Microsoft Learn: Microsoft 365 Apps activation error, problem with your account | https://learn.microsoft.com/en-us/office/troubleshoot/activation/problem-with-your-account'
+  - 'Microsoft Learn: No Office license assigned that includes desktop apps | https://learn.microsoft.com/en-us/office/troubleshoot/activation/license-not-assigned'
+  notes: Microsoft says one license can be installed on up to 5 devices and recommends sign out and sign in, checking the license assignment, and the activation troubleshooter.

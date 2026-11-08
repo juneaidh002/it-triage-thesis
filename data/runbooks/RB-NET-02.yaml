@@ -1,0 +1,24 @@
+id: RB-NET-02
+title: No internet on wired connection
+category: Wi-Fi and network
+owner: Network
+applies_when: Desk or dock connection shows no network
+pre_checks:
+- Cable is plugged in at both ends
+steps:
+- Reseat the network cable and dock
+- Try a different wall port or cable
+- Run the Windows network troubleshooter
+- Disable and enable the network adapter
+- Restart the laptop
+allowed_actions:
+- send_instructions
+escalate_if:
+- Wall port appears dead
+- Several desks on the same floor are affected
+auto_resolvable: true
+verification:
+  status: checked_official_docs
+  checked_against:
+  - 'Microsoft Support: Fix Wi-Fi connection issues in Windows | https://support.microsoft.com/help/10741'
+  notes: 'Partly covered: Microsoft''s page is written for Wi-Fi, but the troubleshooter, adapter and restart steps apply to wired connections too. Cable and port checks are general practice.'

@@ -1,0 +1,24 @@
+- name: send_instructions
+  description: Send the user a step-by-step message
+  requires_approval: false
+- name: send_password_reset_link
+  description: Send a self-service reset link to the registered recovery address
+  requires_approval: false
+- name: unlock_account
+  description: Unlock an account locked by failed sign-ins
+  requires_approval: false
+- name: check_service_status
+  description: Read the status of a shared service
+  requires_approval: false
+- name: request_access_approval
+  description: Create an approval request to the manager or resource owner
+  requires_approval: true
+- name: push_software_install
+  description: Push an approved package to the user's device
+  requires_approval: true
+- name: create_hardware_request
+  description: Open a hardware repair or replacement request
+  requires_approval: true
+- name: assign_to_team
+  description: Route the ticket to an owning team queue
+  requires_approval: false

@@ -1,0 +1,28 @@
+id: RB-HW-02
+title: Battery or charger problem
+category: Laptop hardware
+owner: Hardware
+applies_when: Laptop does not charge or battery drains quickly
+pre_checks:
+- Charger is the correct model
+- Wall outlet works
+steps:
+- Try another outlet and cable
+- Reseat the charger and check the port for debris
+- Run the built-in battery diagnostic
+- If the case or touchpad is bulging, stop using the laptop, unplug the charger and do not press on the battery
+- Do not remove or dispose of a swollen battery yourself, and request a replacement
+allowed_actions:
+- send_instructions
+- create_hardware_request
+escalate_if:
+- Battery is swollen, hot or smells burnt, stop using and escalate at once
+- Diagnostic reports a failing battery
+- Charger or port is visibly damaged
+auto_resolvable: true
+verification:
+  status: checked_vendor_docs
+  checked_against:
+  - 'Dell Support: Swollen Battery Information and Guidance | https://www.dell.com/support/kbdoc/en-us/000128491/swollen-battery-information-and-guidance'
+  - 'Computer Hope: swollen battery article that cites HP guidance (secondary source) | https://www.computerhope.com/issues/ch002349.htm'
+  notes: Dell and HP guidance says to stop using a swollen battery, disconnect AC power and have it replaced by an authorized technician. They differ from some retail guides on how dangerous it is. The runbook takes the cautious route as a deliberate benchmark choice.

@@ -1,0 +1,7 @@
+experiments/llm_cache/
+data/processed/
+data/tickets/external/
+.env
+__pycache__/
+*.pyc
+.venv/

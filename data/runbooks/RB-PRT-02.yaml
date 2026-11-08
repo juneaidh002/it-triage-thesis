@@ -1,0 +1,25 @@
+id: RB-PRT-02
+title: Add a printer
+category: Printers and peripherals
+owner: Desktop support
+applies_when: User needs a printer added to their laptop
+pre_checks:
+- Printer name or location is known
+- Device is on the office network
+steps:
+- Find the printer name or location
+- Add it from the self-service printer list
+- Set it as default if requested
+- Print a test page
+allowed_actions:
+- push_software_install
+- send_instructions
+escalate_if:
+- Printer is not in the list
+- Driver install fails
+auto_resolvable: true
+verification:
+  status: not_verifiable_company_specific
+  checked_against: []
+  notes: Depends on the organization's own systems, catalogs or approval process, so public documentation cannot verify it. Needs review by someone who knows the real service desk process.
+must_mention: the printer name or location

@@ -1,0 +1,24 @@
+id: RB-HW-01
+title: Laptop running slowly
+category: Laptop hardware
+owner: Hardware
+applies_when: Laptop is slow, freezing or has long start-up time
+pre_checks:
+- Laptop has not been restarted recently
+- Disk space is known
+steps:
+- Restart the laptop
+- Close unused applications and browser tabs
+- Check free disk space
+- Install pending updates
+allowed_actions:
+- send_instructions
+- create_hardware_request
+escalate_if:
+- Slowness continues after all steps
+- Disk or memory errors are shown
+auto_resolvable: true
+verification:
+  status: unverified
+  checked_against: []
+  notes: Drafted from general IT knowledge. Not yet checked against public documentation.

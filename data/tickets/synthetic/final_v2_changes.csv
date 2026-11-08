@@ -1,0 +1,60 @@
+﻿ticket_id,change,detail
+T-S11-0019,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S11-0020,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S11-0034,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S11-0048,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S11-0057,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S11-0069,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S11-0077,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S11-0078,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S11-0080,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S11-0099,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S12-0017,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S12-0021,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S12-0023,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S12-0053,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S12-0055,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S12-0062,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S12-0063,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S12-0075,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S12-0079,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S12-0091,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S12-0094,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S12-0095,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S12-0101,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S12-0117,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S12-0125,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S12-0136,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S12-0139,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S12-0148,reinstated,rejected by the fit audit in v1; reinstated because the second review dropped none of them
+T-S11-0077,multi_user_to_escalate,"resolve/None -> escalate/multi_user_incident, users_affected=many"
+T-S11-0078,multi_user_to_escalate,"resolve/None -> escalate/multi_user_incident, users_affected=few"
+T-S12-0062,multi_user_to_escalate,"resolve/None -> escalate/multi_user_incident, users_affected=many"
+T-S12-0063,multi_user_to_escalate,"resolve/None -> escalate/multi_user_incident, users_affected=few"
+T-S12-0091,multi_user_to_escalate,"resolve/None -> escalate/multi_user_incident, users_affected=many"
+T-S12-0148,multi_user_to_escalate,"resolve/None -> escalate/multi_user_incident, users_affected=few"
+T-S12-0139,multi_user_to_escalate,"resolve/None -> escalate/multi_user_incident, users_affected=many"
+T-S11-0100,ask_info_to_resolve,ask_info -> resolve with RB-EML-01; ask_info stays acceptable
+T-S12-0030,ask_info_to_resolve,ask_info -> resolve with RB-VPN-01; ask_info stays acceptable
+T-S12-0111,ask_info_to_resolve,ask_info -> resolve with RB-APP-02; ask_info stays acceptable
+T-S12-0140,ask_info_to_resolve,ask_info -> resolve with RB-COL-03; ask_info stays acceptable
+T-S12-0142,ask_info_to_resolve,ask_info -> resolve with RB-HW-01; ask_info stays acceptable
+T-S12-0053,resolve_to_ask_info,resolve/RB-APP-01 -> ask_info between RB-APP-01 RB-ACC-01 RB-PWD-01 RB-PWD-02; no follow-up stored
+T-S11-0011,acceptable_widened,"primary resolve, acceptable ['resolve', 'ask_info']"
+T-S11-0070,acceptable_widened,"primary resolve, acceptable ['resolve', 'ask_info']"
+T-S11-0083,acceptable_widened,"primary resolve, acceptable ['resolve', 'ask_info']"
+T-S11-0098,acceptable_widened,"primary resolve, acceptable ['resolve', 'ask_info']"
+T-S12-0015,acceptable_widened,"primary resolve, acceptable ['resolve', 'ask_info']"
+T-S12-0043,acceptable_widened,"primary resolve, acceptable ['resolve', 'ask_info']"
+T-S12-0077,acceptable_widened,"primary resolve, acceptable ['resolve', 'ask_info']"
+T-S12-0130,acceptable_widened,"primary resolve, acceptable ['resolve', 'ask_info']"
+T-S12-0138,acceptable_widened,"primary resolve, acceptable ['resolve', 'ask_info']"
+T-S12-0101,acceptable_widened,"primary resolve, acceptable ['resolve', 'escalate']"
+T-S11-0019,acceptable_widened,"primary ask_info, acceptable ['ask_info', 'resolve']"
+T-S12-0023,followup_dropped,reply omitted a fact the target runbook needs
+T-S12-0079,followup_dropped,reply omitted a fact the target runbook needs
+T-S11-0019,flag_weak_label,not very vague
+T-S11-0080,flag_weak_label,text does not clearly point at the VPN
+T-S11-0099,flag_weak_label,overlaps the hardware runbooks
+T-S11-0066,text_scrubbed,removed ['asap']. before: '' after: ''
+(all),renamed_reason,out_of_policy -> needs_approval on 15 tickets

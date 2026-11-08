@@ -1,0 +1,42 @@
+# One entry per role. Use DIFFERENT models for generation and agent so results
+# do not favour text written in the agent's own style. Keep the agent model identical
+# across all experiment conditions. Record exact model names in the thesis.
+#
+# provider: anthropic | openai | mock
+#   openai = any OpenAI-compatible endpoint (OpenAI, Gemini or Groq compatibility endpoints,
+#            or a local server such as Ollama or llama.cpp via base_url)
+#   mock   = fixed fake output, for testing the code without API cost
+
+generation:            # writes tickets and follow-up replies (one-time job)
+  provider: openai                      # Groq exposes an OpenAI-compatible API
+  model: qwen/qwen3.8-27b               # copy the exact id from your Groq console
+  temperature: 0.8
+  max_tokens: 700                       # reasoning is switched off below, so a ticket plus JSON needs far fewer tokens
+  api_key_env: GROQ_API_KEY             # export this in your shell or put it in .env, never write the key in code
+  base_url: https://api.groq.com/openai/v1
+  extra_body: {reasoning_effort: "none"}   # Groq docs: Qwen 3.8 27B accepts none or default; none = no reasoning tokens
+
+agent:                 # runs the RAG pipeline and the verification step in every experiment
+  provider: openai
+  model: CHANGE_ME
+  temperature: 0.0
+  max_tokens: 800
+  api_key_env: OPENAI_API_KEY
+  base_url: null
+
+judge:                 # scores ticket fit in audit_fit.py; a different model family from the generator
+  provider: openai
+  model: openai/gpt-oss-120b            # copy the exact id from your Groq console
+  temperature: 0.0
+  max_tokens: 1000                      # reasoning tokens count toward this limit, so keep it generous
+  api_key_env: GROQ_API_KEY
+  base_url: https://api.groq.com/openai/v1
+  extra_body: {reasoning_effort: "low"}    # Groq docs: gpt-oss models accept low, medium or high
+
+agent_local:           # optional: small quantized model on CPU for the cost comparison
+  provider: openai
+  model: CHANGE_ME
+  temperature: 0.0
+  max_tokens: 800
+  api_key_env: LOCAL_API_KEY
+  base_url: http://localhost:11434/v1

@@ -1,0 +1,23 @@
+id: RB-DRV-01
+title: Shared drive not showing
+category: Shared drives and file access
+owner: Storage
+applies_when: Mapped drive is missing or disconnected
+pre_checks:
+- User is on the office network or VPN
+steps:
+- Confirm the VPN or office network is connected
+- Remap the drive using the correct path
+- Sign in again if prompted
+- Restart the laptop
+allowed_actions:
+- send_instructions
+escalate_if:
+- Path is reported as not found
+- Many users cannot reach the drive
+auto_resolvable: true
+verification:
+  status: unverified
+  checked_against: []
+  notes: Drafted from general IT knowledge. Not yet checked against public documentation.
+must_mention: that the drive or folder is missing or disconnected, not that access is denied
