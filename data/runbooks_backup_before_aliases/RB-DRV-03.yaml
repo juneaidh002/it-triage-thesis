@@ -1,0 +1,27 @@
+id: RB-DRV-03
+title: Restore a deleted or overwritten file
+category: Shared drives and file access
+owner: Storage
+applies_when: User deleted or overwrote a file by mistake
+pre_checks:
+- File name and last location are known
+steps:
+- Check the local Recycle Bin
+- For OneDrive or SharePoint files, check the web recycle bin, including the second-stage bin
+- Use version history in OneDrive or SharePoint, or Previous Versions if backups are turned on
+- Ask when the file was last seen
+allowed_actions:
+- send_instructions
+- assign_to_team
+escalate_if:
+- File is not found in any bin or version history
+- Deletion was longer ago than the retention period
+- A whole-folder or whole-drive restore is needed
+auto_resolvable: true
+verification:
+  status: checked_official_docs
+  checked_against:
+  - 'Microsoft Support: Restore deleted files or folders in OneDrive | https://support.microsoft.com/help/949ada80-0026-4db3-a953-c99083e6a84f'
+  - 'Microsoft Support: Restore a previous version of a file stored in OneDrive | https://support.microsoft.com/help/159cad6d-d76e-4981-88ef-de6e96c93893'
+  notes: Microsoft notes files deleted in the cloud do not appear in the local Recycle Bin, and retention differs by account type. Network-share Previous Versions steps are general practice, not from these pages.
+must_mention: the name of the file

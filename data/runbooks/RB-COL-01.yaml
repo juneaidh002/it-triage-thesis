@@ -26,3 +26,10 @@ verification:
   - 'Microsoft Support: My camera isn''t working in Microsoft Teams | https://support.microsoft.com/topic/9581983b-c6f9-40e3-b0d8-122857972ade'
   - 'Microsoft Support: My microphone isn''t working in Microsoft Teams | https://prod.support.services.microsoft.com/en-au/office/my-microphone-isn-t-working-in-microsoft-teams-666d1123-9dd0-4a31-ad2e-a758b204f33a'
   notes: Official pages describe the test call, privacy settings, closing other apps and reconnecting devices, and say VDI troubleshooting goes through the IT admin.
+aliases:
+- mic not working in teams
+- camera not working in a meeting
+- no sound in the call
+- others cannot hear me
+- webcam shows a black screen
+- audio cutting out on calls

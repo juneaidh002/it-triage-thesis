@@ -20,3 +20,10 @@ verification:
   status: not_verifiable_company_specific
   checked_against: []
   notes: Depends on the organization's own systems, catalogs or approval process, so public documentation cannot verify it. Needs review by someone who knows the real service desk process.
+aliases:
+- scan to email not working
+- scanner not sending documents
+- scanned document never arrives
+- scan to folder failing
+- copier will not email scans
+- scanner emails are missing

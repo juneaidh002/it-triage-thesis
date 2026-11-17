@@ -28,3 +28,10 @@ verification:
   - 'Microsoft Learn Q&A (community answer): Shared mailbox not auto-mapping | https://learn.microsoft.com/en-us/answers/questions/5608279/shared-mailbox-in-exchange-online-not-auto-mapping'
   notes: Community answers on Microsoft Learn and help-desk pages agree on the 60-minute propagation window and that group-based access does not auto-add the mailbox in classic Outlook.
 must_mention: the name of the shared mailbox or group they want access to (they are asking to be added, not reporting a login error)
+aliases:
+- need access to a shared mailbox
+- add me to the team group
+- cannot see the shared inbox
+- join the distribution list
+- access to our team mailbox
+- added to a group but it is not showing

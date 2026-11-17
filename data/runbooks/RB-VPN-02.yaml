@@ -25,3 +25,10 @@ verification:
   - 'ISCTE-IUL IT: VPN troubleshooting guide (university guide, not vendor) | https://informatica.iscte-iul.pt/?p=91863'
   - 'Cycle.io: VPN troubleshooting guide (generic) | https://cycle.io/learn/vpn-troubleshooting'
   notes: Existing steps match generic guides (change server, reduce load). No vendor-specific source used.
+aliases:
+- vpn keeps dropping
+- vpn disconnects every few minutes
+- vpn is very slow
+- connection drops while on the vpn
+- vpn lags
+- keeps getting kicked off the vpn

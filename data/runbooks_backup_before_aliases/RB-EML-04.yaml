@@ -1,0 +1,28 @@
+id: RB-EML-04
+title: Email bounced or not delivered
+category: Email and calendar
+owner: Messaging
+applies_when: Sent email returns an error or the recipient does not receive it
+pre_checks:
+- Bounce message or recipient address is available
+steps:
+- Read the User information section of the bounce message and note the error code
+- '5.1.1: the address does not exist, so check spelling and confirm with the recipient'
+- '5.2.2: the recipient mailbox is full, so try later or tell the recipient'
+- 'Message too large: reduce the attachment or share a link instead'
+- '5.7.x: delivery blocked by policy or permissions, so escalate'
+allowed_actions:
+- send_instructions
+escalate_if:
+- Bounce mentions a security or policy block
+- External domain is blocked
+- Bounce repeats after correcting the address
+auto_resolvable: true
+verification:
+  status: checked_official_docs
+  checked_against:
+  - 'Microsoft Learn: Fix NDR error 550 5.7.1 in Exchange Online | https://support.office.com/en-US/article/571-da1ff375-f88f-4a3e-b81f-06cdb6ecae3c'
+  - 'Microsoft: DSNs and NDRs in Exchange Server | https://technet.microsoft.com/en-us/library/bb232118'
+  - 'Microsoft Support: Fix NDR 550 5.1.1 through 5.1.20 in Exchange Online | https://support.microsoft.com/kb/4027356'
+  notes: Microsoft docs describe the user information section and the meaning of 5.1.x and 5.7.x codes. Code meanings for 5.2.2 and size errors are consistent across sources.
+must_mention: who the email was sent to

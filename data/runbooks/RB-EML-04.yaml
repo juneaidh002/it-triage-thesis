@@ -26,3 +26,10 @@ verification:
   - 'Microsoft Support: Fix NDR 550 5.1.1 through 5.1.20 in Exchange Online | https://support.microsoft.com/kb/4027356'
   notes: Microsoft docs describe the user information section and the meaning of 5.1.x and 5.7.x codes. Code meanings for 5.2.2 and size errors are consistent across sources.
 must_mention: who the email was sent to
+aliases:
+- email bounced back
+- message not delivered
+- undeliverable email
+- delivery failed error
+- sent mail returned with an error
+- recipient did not get my email

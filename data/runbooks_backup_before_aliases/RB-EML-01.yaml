@@ -1,0 +1,29 @@
+id: RB-EML-01
+title: Outlook not syncing
+category: Email and calendar
+owner: Messaging
+applies_when: Outlook shows disconnected, offline or old mail
+pre_checks:
+- Internet works
+- Account password is current
+steps:
+- 'Check the Send/Receive tab: if Work Offline is highlighted, click it once'
+- Check whether Outlook on the web works, to tell a client problem from a service problem
+- Check the email service status
+- Restart Outlook
+- Check whether a firewall, antivirus or add-in is interfering
+- Sign out and sign in again
+- Create a new Outlook profile as the last step
+allowed_actions:
+- check_service_status
+- send_instructions
+escalate_if:
+- Webmail also fails
+- Problem remains after a new profile
+- Email service shows an outage
+auto_resolvable: true
+verification:
+  status: checked_official_docs
+  checked_against:
+  - 'Microsoft Support: Check if mail server Outlook is online | https://support.microsoft.com/en-au/office/check-if-mail-server-outlook-is-online-fce74c8b-2989-479a-b325-1cc2e8932fbe'
+  notes: Microsoft's page treats Disconnected and Working Offline as a server-reachability issue and advises confirming server availability. Other steps (add-ins, firewall, profile rebuild) come from generic help-desk guides.

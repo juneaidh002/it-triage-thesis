@@ -26,3 +26,10 @@ verification:
   checked_against:
   - 'Microsoft Support: Troubleshoot problems updating Windows | https://support.microsoft.com/help/10164'
   notes: Steps follow Microsoft's update troubleshooting page. The 20 GB figure applies to upgrades and monthly updates may need less. Managed devices may restrict some of these actions.
+aliases:
+- update failed
+- windows update stuck
+- update keeps restarting
+- software update will not finish
+- stuck on updating
+- update error loop

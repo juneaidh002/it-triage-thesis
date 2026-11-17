@@ -1,0 +1,26 @@
+id: RB-ACC-04
+title: Business application access request
+category: Account lockout and access requests
+owner: Identity
+applies_when: User needs access to an internal business application
+pre_checks:
+- Application name is known
+- Application is in the access catalog
+steps:
+- Identify the application and role requested
+- Confirm it is in the access catalog
+- Send an approval request to the manager
+- Tell the user to expect access within one working day after approval
+allowed_actions:
+- request_access_approval
+- send_instructions
+escalate_if:
+- Application is not in the catalog
+- Requested role is privileged or admin
+- Manager is unknown
+auto_resolvable: true
+verification:
+  status: not_verifiable_company_specific
+  checked_against: []
+  notes: Depends on the organization's own systems, catalogs or approval process, so public documentation cannot verify it. Needs review by someone who knows the real service desk process.
+must_mention: the name of the application and that they are asking to be given access as a new request, not reporting a login error

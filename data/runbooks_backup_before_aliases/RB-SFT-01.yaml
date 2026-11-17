@@ -1,0 +1,26 @@
+id: RB-SFT-01
+title: Install approved software
+category: Software install and licenses
+owner: Desktop support
+applies_when: User asks for software on the approved list
+pre_checks:
+- Software is in the approved catalog
+- Device is company managed
+steps:
+- Confirm the software is in the approved catalog
+- Push the package to the device
+- Ask the user to restart if prompted
+- Confirm the software opens
+allowed_actions:
+- push_software_install
+- send_instructions
+escalate_if:
+- Software is not in the catalog
+- A paid license is needed and none is free
+- Install fails twice
+auto_resolvable: true
+verification:
+  status: not_verifiable_company_specific
+  checked_against: []
+  notes: Depends on the organization's own systems, catalogs or approval process, so public documentation cannot verify it. Needs review by someone who knows the real service desk process.
+must_mention: the name of the software requested

@@ -22,3 +22,10 @@ verification:
   checked_against:
   - 'Microsoft Support: Fix Wi-Fi connection issues in Windows | https://support.microsoft.com/help/10741'
   notes: 'Partly covered: Microsoft''s page is written for Wi-Fi, but the troubleshooter, adapter and restart steps apply to wired connections too. Cable and port checks are general practice.'
+aliases:
+- no internet on cable
+- ethernet not working
+- docking station has no network
+- wired connection shows no internet
+- network cable plugged in but nothing
+- desk network port not working

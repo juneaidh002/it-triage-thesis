@@ -1,0 +1,23 @@
+id: RB-EML-03
+title: Calendar invites missing or not updating
+category: Email and calendar
+owner: Messaging
+applies_when: Meeting invites do not show or updates are missing
+pre_checks:
+- Correct calendar is selected
+- Mailbox is syncing
+steps:
+- Check the right calendar and view are selected
+- Force a sync
+- Check the junk and other folders for invites
+- Check whether a delegate has accepted the invite
+allowed_actions:
+- send_instructions
+escalate_if:
+- Invite from an external organization never arrives
+- Calendar items disappear repeatedly
+auto_resolvable: true
+verification:
+  status: unverified
+  checked_against: []
+  notes: Drafted from general IT knowledge. Not yet checked against public documentation.

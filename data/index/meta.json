@@ -1,0 +1,10 @@
+{
+  "created": "2026-11-09 09:13:19",
+  "n_chunks": 120,
+  "n_runbooks": 40,
+  "runbook_hash": "b992fe22b494",
+  "embedder": "fastembed",
+  "model": "BAAI/bge-small-en-v1.5",
+  "dim": 384,
+  "embed_seconds": 9.79
+}

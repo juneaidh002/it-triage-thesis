@@ -16,13 +16,16 @@ generation:            # writes tickets and follow-up replies (one-time job)
   base_url: https://api.groq.com/openai/v1
   extra_body: {reasoning_effort: "none"}   # Groq docs: Qwen 3.8 27B accepts none or default; none = no reasoning tokens
 
-agent:                 # runs the RAG pipeline and the verification step in every experiment
+agent:
   provider: openai
-  model: CHANGE_ME
+  model: gemini-3.5-flash-lite        # copy the exact id from AI Studio
   temperature: 0.0
-  max_tokens: 800
-  api_key_env: OPENAI_API_KEY
-  base_url: null
+  max_tokens: 1500
+  api_key_env: GEMINI_API_KEY
+  base_url: https://generativelanguage.googleapis.com/v1beta/openai/
+  extra_body: {reasoning_effort: "low"}
+  min_interval_s: 4.5                 # 15 requests per minute
+  max_requests_per_day: 450           # margin under 500
 
 judge:                 # scores ticket fit in audit_fit.py; a different model family from the generator
   provider: openai

@@ -25,3 +25,10 @@ verification:
   checked_against:
   - 'Microsoft Support: Fix Wi-Fi connection issues in Windows | https://support.microsoft.com/help/10741'
   notes: Steps follow Microsoft's Wi-Fi troubleshooting page, including the test with another device and the note that network reset is a last resort.
+aliases:
+- wifi not connecting
+- cannot join the office wifi
+- laptop will not connect to wifi
+- wifi shows no network
+- wireless not working
+- cannot find the corporate wifi

@@ -31,3 +31,10 @@ verification:
   - 'Microsoft Support: Forgot password to sign in to Microsoft 365, Intune, or Azure | https://support.microsoft.com/kb/2606983'
   notes: Official docs say self-service reset needs admin enablement and prior registration, and some on-premises-managed passwords cannot be reset online. Added both as pre-check and escalation.
 must_mention: that they cannot remember their password, without saying the account is locked
+aliases:
+- forgot my password
+- cannot remember my password
+- do not remember my login password
+- need a password reset link
+- password not working, need a new one
+- reset my password

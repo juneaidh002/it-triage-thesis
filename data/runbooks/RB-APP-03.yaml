@@ -21,3 +21,10 @@ verification:
   status: not_verifiable_company_specific
   checked_against: []
   notes: Depends on the organization's own systems, catalogs or approval process, so public documentation cannot verify it. Needs review by someone who knows the real service desk process.
+aliases:
+- report will not run
+- export to excel fails
+- download of the report fails
+- cannot export to pdf
+- report errors out
+- data export stuck

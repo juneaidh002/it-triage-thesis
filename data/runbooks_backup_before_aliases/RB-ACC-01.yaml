@@ -1,0 +1,30 @@
+id: RB-ACC-01
+title: Account locked after failed sign-ins
+category: Account lockout and access requests
+owner: Identity
+applies_when: User is locked out after too many wrong password attempts
+pre_checks:
+- Lockout is not flagged by Security
+- No other lockouts in the last 24 hours
+steps:
+- Check whether an old saved password on a phone, mail app or other device keeps retrying
+- Wait for the automatic lockout to expire, or let the user use self-service reset to clear it
+- Unlock the account if the policy allows
+- Ask the user to sign in on one device only
+- Confirm access works
+allowed_actions:
+- unlock_account
+- send_instructions
+escalate_if:
+- Lockout repeats within 24 hours or from an unfamiliar location, which can mean an attack
+- Account is flagged by Security
+- Sign-in attempts came from unknown locations
+- Several users are locked out at the same time
+auto_resolvable: true
+verification:
+  status: checked_official_docs
+  checked_against:
+  - 'Microsoft Learn: Protect user accounts from attacks with Microsoft Entra smart lockout | https://learn.microsoft.com/en-us/entra/identity/authentication/howto-password-smart-lockout'
+  - 'Microsoft docs mirror: Troubleshoot account lockout (Entra Domain Services) | https://docs.azure.cn/en-us/entra/identity/domain-services/troubleshoot-account-lockout'
+  notes: Microsoft docs say repeated lockouts lengthen the lockout period, self-service reset can clear it, and old saved passwords are a common cause. Microsoft pages differ on whether an admin can unlock early, so the unlock tool is a simulated action here. Added after reviewing generated tickets (design choice, not from public documentation).
+must_mention: that the account is locked or locked out after failed sign-in attempts

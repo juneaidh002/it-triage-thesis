@@ -1,0 +1,26 @@
+id: RB-EML-02
+title: Mailbox full
+category: Email and calendar
+owner: Messaging
+applies_when: User cannot send or receive because the mailbox is full
+pre_checks:
+- User mailbox size is near its limit
+steps:
+- Use Mailbox Cleanup to view mailbox and folder sizes
+- Empty Deleted Items and Junk Email
+- Delete large attachments from Sent Items, then empty Deleted Items again
+- Archive older items if the archive feature is turned on
+- Confirm new mail is arriving
+allowed_actions:
+- send_instructions
+- assign_to_team
+escalate_if:
+- User asks for a larger quota
+- Mailbox still full after cleanup, since hidden or retained items can still count toward the quota
+auto_resolvable: true
+verification:
+  status: checked_official_docs
+  checked_against:
+  - 'Microsoft Support: Manage my mailbox size in Outlook | https://support.microsoft.com/en-us/office/manage-my-mailbox-size-792b521c-3f4e-404e-b436-9c197bad6f45'
+  - 'Microsoft Learn Q&A (community answer): Storage full, cannot delete emails | https://learn.microsoft.com/en-us/answers/a/12660340'
+  notes: Microsoft lists Mailbox Cleanup, emptying Deleted Items and archiving, and notes archiving may be disabled by the organization. A community answer adds that retained items and Sweep still count until Deleted Items is emptied.

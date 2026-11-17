@@ -1,0 +1,28 @@
+id: RB-COL-01
+title: Audio or video not working in meetings
+category: Collaboration tools
+owner: Collaboration
+applies_when: Microphone, speaker or camera does not work in Teams or similar tools
+pre_checks:
+- Headset or camera is plugged in
+- Other apps are not using the camera
+steps:
+- Open Teams Settings > Devices and choose the correct microphone, speaker and camera
+- Run Make a test call
+- Check the operating system privacy settings allow Teams to use the microphone and camera
+- Close other apps that use the camera or microphone
+- Unplug and reconnect external devices, and charge Bluetooth devices and disconnect them from other devices
+- Restart the meeting app or the device
+allowed_actions:
+- send_instructions
+escalate_if:
+- Device is not detected by the operating system
+- Problem continues with different headsets
+- User is on a virtual desktop (VDI)
+auto_resolvable: true
+verification:
+  status: checked_official_docs
+  checked_against:
+  - 'Microsoft Support: My camera isn''t working in Microsoft Teams | https://support.microsoft.com/topic/9581983b-c6f9-40e3-b0d8-122857972ade'
+  - 'Microsoft Support: My microphone isn''t working in Microsoft Teams | https://prod.support.services.microsoft.com/en-au/office/my-microphone-isn-t-working-in-microsoft-teams-666d1123-9dd0-4a31-ad2e-a758b204f33a'
+  notes: Official pages describe the test call, privacy settings, closing other apps and reconnecting devices, and say VDI troubleshooting goes through the IT admin.

@@ -23,3 +23,10 @@ verification:
   checked_against: []
   notes: Depends on the organization's own systems, catalogs or approval process, so public documentation cannot verify it. Needs review by someone who knows the real service desk process.
 must_mention: a login error or failed sign-in to an application they already have access to
+aliases:
+- cannot log in to the app
+- internal tool login fails
+- login keeps failing on our system
+- stuck on the login screen
+- single sign on error in the application
+- app says invalid credentials

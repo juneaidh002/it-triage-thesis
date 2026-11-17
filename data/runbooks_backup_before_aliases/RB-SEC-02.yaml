@@ -1,0 +1,25 @@
+id: RB-SEC-02
+title: Lost or stolen device
+category: Security reports
+owner: Security
+applies_when: User reports a lost or stolen laptop or phone
+pre_checks:
+- Asset tag or device type is known
+steps:
+- Collect when and where the device was lost and whether it was encrypted and enrolled in management
+- Tell the user to report now and not to search everywhere first
+- Advise reporting to the police if theft is suspected and keeping the report number
+- Route to Security immediately for remote lock or wipe
+allowed_actions:
+- assign_to_team
+escalate_if:
+- Always escalate to Security
+- Device holds company data
+auto_resolvable: false
+verification:
+  status: checked_generic_guides_only
+  checked_against:
+  - 'Pictory: Remote wipe and device management (training module) | https://pictory.ai/business-learning-library/lessons/remote-wipe-and-device-management'
+  - 'Deeploi: Company device lost or stolen (vendor blog) | https://www.deeploi.io/magazine/company-device-lost-or-stolen-emergency-guide'
+  - 'Yeo and Yeo: steps when devices go missing (remote wipe needs the device online) | https://www.yeoandyeo.com/resource/safeguarding-company-data-steps-to-take-when-devices-go-missing'
+  notes: Sources are a training module and practitioner or vendor pages, not official standards. They agree on reporting immediately, locking first, wiping if unrecoverable, and that remote wipe needs the device to be online.

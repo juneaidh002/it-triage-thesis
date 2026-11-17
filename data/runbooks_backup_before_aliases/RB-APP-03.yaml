@@ -1,0 +1,23 @@
+id: RB-APP-03
+title: Report or export fails
+category: Internal application errors
+owner: App support
+applies_when: Report fails to run or export to Excel or PDF fails
+pre_checks:
+- Report name and filters are known
+steps:
+- Reduce the date range or filters
+- Try another export format
+- Retry once after a few minutes
+- Capture the error message and time
+allowed_actions:
+- send_instructions
+- assign_to_team
+escalate_if:
+- Error repeats with small filters
+- Report data looks wrong or incomplete
+auto_resolvable: true
+verification:
+  status: not_verifiable_company_specific
+  checked_against: []
+  notes: Depends on the organization's own systems, catalogs or approval process, so public documentation cannot verify it. Needs review by someone who knows the real service desk process.

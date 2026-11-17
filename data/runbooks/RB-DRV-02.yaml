@@ -24,3 +24,10 @@ verification:
   checked_against: []
   notes: Depends on the organization's own systems, catalogs or approval process, so public documentation cannot verify it. Needs review by someone who knows the real service desk process.
 must_mention: the folder name or path and that they see an access denied or permission message
+aliases:
+- access denied to a folder
+- permission denied on the shared folder
+- cannot open the folder, no permission
+- need access to a folder
+- not authorized to open the directory
+- you do not have permission message

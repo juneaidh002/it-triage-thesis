@@ -1,0 +1,25 @@
+id: RB-ACC-03
+title: New joiner access setup
+category: Account lockout and access requests
+owner: Identity
+applies_when: New employee cannot reach standard tools on or after the first day
+pre_checks:
+- Employee record exists
+- Start date has passed
+steps:
+- Confirm the employee record and role
+- Request the standard role access bundle
+- Ask the user to sign in and check each core tool
+- Confirm completion
+allowed_actions:
+- request_access_approval
+- send_instructions
+escalate_if:
+- No employee record found
+- Role needs non-standard access
+auto_resolvable: true
+verification:
+  status: not_verifiable_company_specific
+  checked_against: []
+  notes: Depends on the organization's own systems, catalogs or approval process, so public documentation cannot verify it. Needs review by someone who knows the real service desk process.
+must_mention: that they just joined or started recently and cannot reach the standard tools they were told to expect

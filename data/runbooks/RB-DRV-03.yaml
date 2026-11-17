@@ -25,3 +25,10 @@ verification:
   - 'Microsoft Support: Restore a previous version of a file stored in OneDrive | https://support.microsoft.com/help/159cad6d-d76e-4981-88ef-de6e96c93893'
   notes: Microsoft notes files deleted in the cloud do not appear in the local Recycle Bin, and retention differs by account type. Network-share Previous Versions steps are general practice, not from these pages.
 must_mention: the name of the file
+aliases:
+- deleted a file by mistake
+- overwrote my document
+- need an older version of a file
+- recover a deleted file
+- file disappeared from the shared folder
+- restore a previous version

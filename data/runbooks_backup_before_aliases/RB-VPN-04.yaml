@@ -1,0 +1,25 @@
+id: RB-VPN-04
+title: VPN client install or update
+category: VPN and remote access
+owner: Network
+applies_when: User needs the VPN client installed or updated
+pre_checks:
+- Device is company managed
+- Operating system is supported
+steps:
+- Confirm the device is managed and supported
+- Push the approved VPN client package
+- Ask the user to restart the device
+- Guide the first sign-in
+allowed_actions:
+- push_software_install
+- send_instructions
+escalate_if:
+- Install fails twice
+- Operating system is not supported
+- Device is personal
+auto_resolvable: true
+verification:
+  status: unverified
+  checked_against: []
+  notes: Drafted from general IT knowledge. Not yet checked against public documentation.

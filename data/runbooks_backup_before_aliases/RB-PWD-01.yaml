@@ -1,0 +1,33 @@
+id: RB-PWD-01
+title: Forgotten password
+category: Password and MFA
+owner: Identity
+applies_when: User forgot their password and cannot sign in
+pre_checks:
+- Account is not locked
+- Account is not an admin or privileged account
+- User has access to their recovery email or phone
+- Self-service reset is enabled by the organization and the user has registered recovery details
+steps:
+- Direct the user to the self-service password reset page
+- Send a reset link to the registered recovery address
+- Ask the user to choose a new password that meets policy
+- Ask the user to sign in and confirm it works
+allowed_actions:
+- send_password_reset_link
+- send_instructions
+escalate_if:
+- User cannot access the recovery email or phone
+- Reset link fails twice
+- Ticket mentions an admin or privileged account
+- Reset page says the account is not enabled for self-service reset or is not registered
+- Password is managed on-premises and cannot be reset online
+auto_resolvable: true
+verification:
+  status: checked_official_docs
+  checked_against:
+  - 'Microsoft Support: Register the password reset verification method for a work or school account | https://support.microsoft.com/accounts-billing/work-school/register-the-password-reset-verification-method-for-a-work-or-school-account'
+  - 'Microsoft Support: How to reset a forgotten password for a Microsoft work or school account | https://support.microsoft.com/article/23dde81f-08bb-4776-ba72-e6b72b9dda9e'
+  - 'Microsoft Support: Forgot password to sign in to Microsoft 365, Intune, or Azure | https://support.microsoft.com/kb/2606983'
+  notes: Official docs say self-service reset needs admin enablement and prior registration, and some on-premises-managed passwords cannot be reset online. Added both as pre-check and escalation.
+must_mention: that they cannot remember their password, without saying the account is locked

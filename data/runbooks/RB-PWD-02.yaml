@@ -23,3 +23,10 @@ verification:
   checked_against: []
   notes: Drafted from general IT knowledge. Not yet checked against public documentation.
 must_mention: that the system says their password has expired
+aliases:
+- password expired
+- system says I must change my password
+- told to update my password
+- password change required at login
+- password has run out
+- password is due for renewal

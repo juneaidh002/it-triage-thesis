@@ -25,3 +25,10 @@ verification:
   - 'University of Arizona Security: How to handle suspicious emails | https://security.arizona.edu/sites/default/files/2024-09/Security-Hints-and-Tips-How-Handle-Suspicious-Emails.pdf'
   - 'Cybersmart: What to do if you click on a phishing link | https://cybersmart.co.uk/2025/09/what-to-do-if-you-click-on-a-phishing-link'
   notes: 'CISA advises notifying IT and following incident reporting steps. Practice varies: one university says to report only if a link was clicked. Always escalating is a deliberate benchmark rule here.'
+aliases:
+- suspicious email
+- phishing email
+- clicked a link in a strange email
+- email asking for my password
+- fake message pretending to be hr
+- entered my password on a strange site

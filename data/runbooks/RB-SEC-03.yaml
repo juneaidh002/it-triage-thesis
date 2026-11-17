@@ -24,3 +24,10 @@ verification:
   - 'University of Wisconsin Information Security: MFA fatigue attacks | https://www.wisconsin.edu/information-security/2026/04/30/when-your-phone-will-not-stop-buzzing-mfa-fatigue-attacks/'
   - 'UTMB Information Security: MFA fatigue attacks | https://www.utmb.edu/infosec/welcome-to-infosec/infosec-corner/article/information-security-corner/2026/02/03/mfa-fatigue-attacks'
   notes: University security pages agree on deny, report, and notify the service desk if approved. Some advise changing the password right away. This runbook defers the password step to Security as a benchmark rule.
+aliases:
+- unexpected sign in alert
+- login prompts I did not start
+- mfa prompts keep coming
+- someone may be using my account
+- strange login notification
+- approval requests I never made

@@ -29,3 +29,10 @@ verification:
   - 'ISCTE-IUL IT: VPN troubleshooting guide (university guide, not vendor) | https://informatica.iscte-iul.pt/?p=91863'
   - 'Cycle.io: VPN troubleshooting guide (generic) | https://cycle.io/learn/vpn-troubleshooting'
   notes: Added firewall check. Escalation note added from the ISCTE guide.
+aliases:
+- vpn not connecting
+- cannot connect to the vpn
+- vpn fails when I try to connect
+- secure connection fails
+- stuck on connecting
+- cannot reach internal systems from home

@@ -1,0 +1,24 @@
+id: RB-APP-02
+title: Application slow or timing out
+category: Internal application errors
+owner: App support
+applies_when: Internal application is slow or requests time out
+pre_checks:
+- Time and action that was slow are known
+steps:
+- Check the application status
+- Ask the user to note the time and screen
+- Clear the browser cache and retry
+- Retry outside peak hours
+allowed_actions:
+- check_service_status
+- send_instructions
+- assign_to_team
+escalate_if:
+- Several users report the same slowness
+- Error message mentions a server or database
+auto_resolvable: true
+verification:
+  status: not_verifiable_company_specific
+  checked_against: []
+  notes: Depends on the organization's own systems, catalogs or approval process, so public documentation cannot verify it. Needs review by someone who knows the real service desk process.

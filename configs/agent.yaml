@@ -1,0 +1,13 @@
+# Agent v0 settings. Model roles live in configs/models.yaml (role: agent).
+retrieval:
+  method: hybrid          # frozen choice from the retrieval experiments
+  query_mode: plain
+  k_runbooks: 3           # runbooks whose chunks are passed to the model
+  index_dir: data/index
+guardrails:
+  pii_redaction: true     # replace emails, phones, employee ids and (partly) names before any model sees the ticket
+  injection_screen: true  # rule based screen; used by the policy checks of c3 and c4
+  sensitive_screen: true  # security topics (phishing, lost or stolen device, suspicious sign-ins) always go to a human in c3 and c4
+verify: true              # second call that checks the draft against the runbook text
+tuning:
+  max_error_among_handled: 0.05

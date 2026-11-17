@@ -1,0 +1,26 @@
+id: RB-PWD-04
+title: MFA device lost or replaced
+category: Password and MFA
+owner: Identity
+applies_when: User has a new phone or lost the old one and cannot approve MFA
+pre_checks:
+- User can describe the old device
+- Backup method is checked
+steps:
+- Ask whether another registered method works or Authenticator cloud backup was turned on before the old phone was wiped
+- Explain that the help desk or an admin must clear the MFA methods after verifying identity
+- Explain that all old methods are removed and new ones are registered at the next sign-in
+- Route the ticket to the Identity team for verified re-registration
+allowed_actions:
+- send_instructions
+- assign_to_team
+escalate_if:
+- Always requires identity verification by a human
+- User asks for a reset without verification
+auto_resolvable: false
+verification:
+  status: checked_community_answers
+  checked_against:
+  - 'Microsoft Learn Q&A (community answer): New phone, Authenticator codes | https://learn.microsoft.com/answers/a/12897701'
+  - 'Microsoft Learn Q&A (community answer): Not receiving a code to log in | https://learn.microsoft.com/answers/a/12914621'
+  notes: Sources agree that a lost-device case with no alternate method needs an admin-side MFA reset. Authenticator settings do not move to a new phone automatically unless cloud backup was used.

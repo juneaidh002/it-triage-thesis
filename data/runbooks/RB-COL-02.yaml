@@ -22,3 +22,10 @@ verification:
   status: unverified
   checked_against: []
   notes: Drafted from general IT knowledge. Not yet checked against public documentation. Added after reviewing generated tickets (design choice, not from public documentation).
+aliases:
+- cannot join the meeting
+- meeting link not working
+- stuck at joining
+- error when joining a teams call
+- join button does nothing
+- cannot enter the video call

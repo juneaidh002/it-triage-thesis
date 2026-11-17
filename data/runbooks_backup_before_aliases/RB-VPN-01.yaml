@@ -1,0 +1,31 @@
+id: RB-VPN-01
+title: VPN will not connect
+category: VPN and remote access
+owner: Network
+applies_when: User cannot connect to the corporate VPN but the internet works
+pre_checks:
+- Internet works
+- VPN client is installed
+- Account is not locked
+steps:
+- Check the VPN service status
+- Restart the VPN client
+- Clear the cached profile and sign in again
+- Check that a firewall or antivirus is not blocking the VPN client
+- Approve the MFA prompt
+- Test on a different network such as a phone hotspot
+allowed_actions:
+- check_service_status
+- send_instructions
+escalate_if:
+- Error persists after all steps
+- Service status shows an outage
+- Several users report the same problem
+auto_resolvable: true
+escalation_note: When escalating, include when the problem started, whether others are affected, the steps already tried, and the exact error text or a screenshot
+verification:
+  status: checked_generic_guides_only
+  checked_against:
+  - 'ISCTE-IUL IT: VPN troubleshooting guide (university guide, not vendor) | https://informatica.iscte-iul.pt/?p=91863'
+  - 'Cycle.io: VPN troubleshooting guide (generic) | https://cycle.io/learn/vpn-troubleshooting'
+  notes: Added firewall check. Escalation note added from the ISCTE guide.

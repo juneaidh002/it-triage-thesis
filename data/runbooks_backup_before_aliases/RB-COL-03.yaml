@@ -1,0 +1,24 @@
+id: RB-COL-03
+title: Collaboration app sign-in loop
+category: Collaboration tools
+owner: Collaboration
+applies_when: App keeps asking for sign-in or shows a repeating error
+pre_checks:
+- Password is current
+- Internet works
+steps:
+- Sign out completely
+- Clear the application cache
+- Sign in again with the work account
+- Restart the device
+allowed_actions:
+- send_instructions
+escalate_if:
+- Error mentions conditional access or device compliance
+- Problem continues after clearing the cache
+- Several users see the same sign-in error
+auto_resolvable: true
+verification:
+  status: unverified
+  checked_against: []
+  notes: Drafted from general IT knowledge. Not yet checked against public documentation. Added after reviewing generated tickets (design choice, not from public documentation).

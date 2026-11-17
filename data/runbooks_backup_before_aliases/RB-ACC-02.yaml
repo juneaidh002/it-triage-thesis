@@ -1,0 +1,30 @@
+id: RB-ACC-02
+title: Shared mailbox or group access
+category: Account lockout and access requests
+owner: Identity
+applies_when: User needs access to a shared mailbox, distribution list or team group
+pre_checks:
+- Exact group or mailbox name is known
+- Business reason is stated
+steps:
+- Confirm the exact group or mailbox name
+- Confirm the business need
+- Send an approval request to the resource owner
+- After approval, tell the user it can take up to 60 minutes, then to fully close and reopen Outlook
+- If access was given through a group, the mailbox may need to be added manually, or opened in Outlook on the web
+allowed_actions:
+- request_access_approval
+- send_instructions
+escalate_if:
+- Group holds finance, HR or restricted data
+- Approver does not respond within 2 working days
+- Name does not match any known group
+- Mailbox still does not open after the propagation window
+auto_resolvable: true
+verification:
+  status: checked_community_answers
+  checked_against:
+  - 'Microsoft Learn Q&A (community answer): New shared mailboxes not appearing in classic Outlook | https://learn.microsoft.com/en-us/answers/questions/5870683/new-shared-mailboxes-are-not-appearing-for-users-i'
+  - 'Microsoft Learn Q&A (community answer): Shared mailbox not auto-mapping | https://learn.microsoft.com/en-us/answers/questions/5608279/shared-mailbox-in-exchange-online-not-auto-mapping'
+  notes: Community answers on Microsoft Learn and help-desk pages agree on the 60-minute propagation window and that group-based access does not auto-add the mailbox in classic Outlook.
+must_mention: the name of the shared mailbox or group they want access to (they are asking to be added, not reporting a login error)

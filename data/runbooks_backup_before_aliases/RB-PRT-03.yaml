@@ -1,0 +1,22 @@
+id: RB-PRT-03
+title: Scan to email not working
+category: Printers and peripherals
+owner: Desktop support
+applies_when: Scanner does not send documents to email
+pre_checks:
+- Scan destination address is known
+steps:
+- Check the destination email address on the scanner
+- Check the user's mailbox and junk folder
+- Retry with a smaller document
+- Try scan to folder as an alternative
+allowed_actions:
+- send_instructions
+escalate_if:
+- Scanner shows a network or server error
+- Several users have the same problem
+auto_resolvable: true
+verification:
+  status: not_verifiable_company_specific
+  checked_against: []
+  notes: Depends on the organization's own systems, catalogs or approval process, so public documentation cannot verify it. Needs review by someone who knows the real service desk process.

@@ -1,0 +1,24 @@
+id: RB-COL-02
+title: Cannot join a meeting
+category: Collaboration tools
+owner: Collaboration
+applies_when: User cannot join a scheduled online meeting
+pre_checks:
+- Meeting link is available
+steps:
+- Check the link and the meeting time
+- Sign in with the work account
+- Try the web version
+- Update the meeting app
+allowed_actions:
+- send_instructions
+- check_service_status
+escalate_if:
+- Meeting is hosted by an external organization with restrictions
+- Error mentions a policy block
+- Several participants cannot join the same meeting
+auto_resolvable: true
+verification:
+  status: unverified
+  checked_against: []
+  notes: Drafted from general IT knowledge. Not yet checked against public documentation. Added after reviewing generated tickets (design choice, not from public documentation).

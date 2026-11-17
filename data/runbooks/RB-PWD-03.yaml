@@ -24,3 +24,10 @@ verification:
   checked_against:
   - 'Microsoft Learn Q&A (community answer): Authenticator app not getting code | https://learn.microsoft.com/en-ca/answers/questions/5826110/authenticator-app-not-getting-code'
   notes: Source is a Microsoft Learn Q&A answer (not a formal doc page). Added the warning about repeated code requests, unknown-sender text blocking and alternate methods. Added after reviewing generated tickets (design choice, not from public documentation).
+aliases:
+- did not get the verification code
+- text message code not coming
+- authenticator code not received
+- no sms for login
+- waiting for the one time passcode
+- code never arrives on my phone

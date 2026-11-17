@@ -28,3 +28,10 @@ verification:
   - 'Microsoft docs mirror: Troubleshoot account lockout (Entra Domain Services) | https://docs.azure.cn/en-us/entra/identity/domain-services/troubleshoot-account-lockout'
   notes: Microsoft docs say repeated lockouts lengthen the lockout period, self-service reset can clear it, and old saved passwords are a common cause. Microsoft pages differ on whether an admin can unlock early, so the unlock tool is a simulated action here. Added after reviewing generated tickets (design choice, not from public documentation).
 must_mention: that the account is locked or locked out after failed sign-in attempts
+aliases:
+- account is locked
+- locked out after wrong password
+- too many failed attempts
+- locked out of my laptop login
+- account disabled after sign-in attempts
+- please unlock my account

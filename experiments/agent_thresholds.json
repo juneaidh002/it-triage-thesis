@@ -1,0 +1,13 @@
+{
+  "thresholds": {
+    "c2_confidence": 90,
+    "c3_confidence": 95
+  },
+  "tuned_on": "final_v2:dev",
+  "max_error": 0.05,
+  "n_tickets": 100,
+  "feasible": {
+    "c2": false,
+    "c3": true
+  }
+}

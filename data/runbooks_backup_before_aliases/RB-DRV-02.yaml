@@ -1,0 +1,26 @@
+id: RB-DRV-02
+title: Permission denied on a folder
+category: Shared drives and file access
+owner: Storage
+applies_when: User sees access denied on a shared folder
+pre_checks:
+- Folder path is known
+- Business reason is stated
+steps:
+- Confirm the exact folder path and owner
+- Send an approval request to the folder owner
+- After approval, wait 30 minutes
+- Ask the user to sign out and in
+allowed_actions:
+- request_access_approval
+- send_instructions
+escalate_if:
+- Folder holds confidential or restricted data
+- Owner cannot be identified
+- Approval is not given within 2 working days
+auto_resolvable: true
+verification:
+  status: not_verifiable_company_specific
+  checked_against: []
+  notes: Depends on the organization's own systems, catalogs or approval process, so public documentation cannot verify it. Needs review by someone who knows the real service desk process.
+must_mention: the folder name or path and that they see an access denied or permission message

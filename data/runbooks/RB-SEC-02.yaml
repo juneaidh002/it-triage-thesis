@@ -23,3 +23,10 @@ verification:
   - 'Deeploi: Company device lost or stolen (vendor blog) | https://www.deeploi.io/magazine/company-device-lost-or-stolen-emergency-guide'
   - 'Yeo and Yeo: steps when devices go missing (remote wipe needs the device online) | https://www.yeoandyeo.com/resource/safeguarding-company-data-steps-to-take-when-devices-go-missing'
   notes: Sources are a training module and practitioner or vendor pages, not official standards. They agree on reporting immediately, locking first, wiping if unrecoverable, and that remote wipe needs the device to be online.
+aliases:
+- lost my laptop
+- laptop stolen
+- cannot find my company laptop
+- left my phone in a taxi
+- device is missing
+- someone took my work laptop

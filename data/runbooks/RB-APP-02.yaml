@@ -22,3 +22,10 @@ verification:
   status: not_verifiable_company_specific
   checked_against: []
   notes: Depends on the organization's own systems, catalogs or approval process, so public documentation cannot verify it. Needs review by someone who knows the real service desk process.
+aliases:
+- application is slow
+- app keeps timing out
+- system hangs when saving
+- screen freezes then an error
+- internal system very slow
+- page takes forever to load in the tool

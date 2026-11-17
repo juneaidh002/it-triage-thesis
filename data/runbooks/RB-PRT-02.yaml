@@ -23,3 +23,10 @@ verification:
   checked_against: []
   notes: Depends on the organization's own systems, catalogs or approval process, so public documentation cannot verify it. Needs review by someone who knows the real service desk process.
 must_mention: the printer name or location
+aliases:
+- add a printer
+- printer not in my list
+- set up the floor printer
+- need the printer installed on my laptop
+- map the network printer
+- cannot find the printer to add

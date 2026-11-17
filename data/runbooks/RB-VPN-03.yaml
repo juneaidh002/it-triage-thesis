@@ -24,3 +24,10 @@ verification:
   - 'ISCTE-IUL IT: VPN troubleshooting guide (university guide, not vendor) | https://informatica.iscte-iul.pt/?p=91863'
   - 'Cycle.io: VPN troubleshooting guide (generic) | https://cycle.io/learn/vpn-troubleshooting'
   notes: Generic guides only. Certificate and profile handling is vendor-specific and was not verified.
+aliases:
+- vpn trust error
+- certificate error when connecting
+- vpn profile is broken
+- not trusted warning on the vpn
+- profile missing or corrupt
+- security certificate problem on connection

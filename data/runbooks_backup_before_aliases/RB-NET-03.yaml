@@ -1,0 +1,23 @@
+id: RB-NET-03
+title: Slow network
+category: Wi-Fi and network
+owner: Network
+applies_when: User reports slow browsing or downloads
+pre_checks:
+- User can reach websites at all
+steps:
+- Run a speed test and note the result
+- Close heavy downloads and streams
+- Try a wired connection
+- Check the network status page
+allowed_actions:
+- check_service_status
+- send_instructions
+escalate_if:
+- Slowness continues for more than a day
+- Many users report slowness
+auto_resolvable: true
+verification:
+  status: unverified
+  checked_against: []
+  notes: Drafted from general IT knowledge. Not yet checked against public documentation.

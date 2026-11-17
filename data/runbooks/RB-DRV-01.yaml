@@ -21,3 +21,10 @@ verification:
   checked_against: []
   notes: Drafted from general IT knowledge. Not yet checked against public documentation.
 must_mention: that the drive or folder is missing or disconnected, not that access is denied
+aliases:
+- shared drive missing
+- mapped drive disappeared
+- cannot see the network drive
+- drive not showing in explorer
+- z drive is gone
+- lost connection to the shared folder drive

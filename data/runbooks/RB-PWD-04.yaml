@@ -24,3 +24,10 @@ verification:
   - 'Microsoft Learn Q&A (community answer): New phone, Authenticator codes | https://learn.microsoft.com/answers/a/12897701'
   - 'Microsoft Learn Q&A (community answer): Not receiving a code to log in | https://learn.microsoft.com/answers/a/12914621'
   notes: Sources agree that a lost-device case with no alternate method needs an admin-side MFA reset. Authenticator settings do not move to a new phone automatically unless cloud backup was used.
+aliases:
+- got a new phone and cannot approve login
+- lost my phone with the authenticator app
+- changed my phone number
+- old phone was reset, now stuck at approval
+- authenticator app needs to move to a new device
+- cannot approve the sign-in prompt anymore

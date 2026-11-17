@@ -23,3 +23,11 @@ verification:
   checked_against: []
   notes: Depends on the organization's own systems, catalogs or approval process, so public documentation cannot verify it. Needs review by someone who knows the real service desk process.
 must_mention: that they just joined or started recently and cannot reach the standard tools they were told to expect
+aliases:
+- just started
+- new joiner
+- first week at the company
+- joined recently
+- account was not ready when I arrived
+- cannot reach any of the standard tools
+- nothing set up for me on my first day

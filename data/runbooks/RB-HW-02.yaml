@@ -26,3 +26,10 @@ verification:
   - 'Dell Support: Swollen Battery Information and Guidance | https://www.dell.com/support/kbdoc/en-us/000128491/swollen-battery-information-and-guidance'
   - 'Computer Hope: swollen battery article that cites HP guidance (secondary source) | https://www.computerhope.com/issues/ch002349.htm'
   notes: Dell and HP guidance says to stop using a swollen battery, disconnect AC power and have it replaced by an authorized technician. They differ from some retail guides on how dangerous it is. The runbook takes the cautious route as a deliberate benchmark choice.
+aliases:
+- laptop not charging
+- battery drains fast
+- charger not working
+- battery dies quickly
+- laptop will not hold a charge
+- charging light does not come on

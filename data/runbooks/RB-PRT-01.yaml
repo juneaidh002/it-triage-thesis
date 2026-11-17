@@ -27,3 +27,10 @@ verification:
   - 'Microsoft Support: Troubleshooting offline printer problems in Windows | https://support.microsoft.com/help/4496876'
   - 'Microsoft Support: Fix print job stuck in queue errors in Windows | https://support.microsoft.com/en-US/Windows/Hardware/Printer/fix-print-job-stuck-in-queue-errors-in-windows'
   notes: Steps follow Microsoft's printer offline and stuck queue pages. The last escalation condition is my inference for managed devices, not stated in the sources.
+aliases:
+- cannot print
+- print job stuck in the queue
+- printer not printing
+- documents will not print
+- printer shows offline
+- nothing comes out of the printer

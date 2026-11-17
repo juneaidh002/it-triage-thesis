@@ -1,0 +1,25 @@
+id: RB-PWD-02
+title: Expired password
+category: Password and MFA
+owner: Identity
+applies_when: Sign-in shows that the password has expired
+pre_checks:
+- User is on the office network or VPN
+- Account is not locked
+steps:
+- Open the self-service password change page
+- Set a new password that meets policy
+- Update the saved password on phone and mail apps
+- Sign out and sign in again
+allowed_actions:
+- send_instructions
+- send_password_reset_link
+escalate_if:
+- Change is rejected even though the password meets policy
+- Account locks again after the change
+auto_resolvable: true
+verification:
+  status: unverified
+  checked_against: []
+  notes: Drafted from general IT knowledge. Not yet checked against public documentation.
+must_mention: that the system says their password has expired

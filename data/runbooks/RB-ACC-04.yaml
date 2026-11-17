@@ -24,3 +24,10 @@ verification:
   checked_against: []
   notes: Depends on the organization's own systems, catalogs or approval process, so public documentation cannot verify it. Needs review by someone who knows the real service desk process.
 must_mention: the name of the application and that they are asking to be given access as a new request, not reporting a login error
+aliases:
+- need access to an application
+- please give me access to the app
+- request access to a business system
+- add me as a user
+- new access request for a tool
+- want permission to use a system

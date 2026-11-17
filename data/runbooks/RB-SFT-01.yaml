@@ -24,3 +24,10 @@ verification:
   checked_against: []
   notes: Depends on the organization's own systems, catalogs or approval process, so public documentation cannot verify it. Needs review by someone who knows the real service desk process.
 must_mention: the name of the software requested
+aliases:
+- need software installed
+- please install an application
+- install a program on my laptop
+- want a tool from the approved list
+- software request
+- need an app on my machine

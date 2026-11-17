@@ -24,3 +24,10 @@ verification:
   - 'Microsoft Learn: Microsoft 365 Apps activation error, problem with your account | https://learn.microsoft.com/en-us/office/troubleshoot/activation/problem-with-your-account'
   - 'Microsoft Learn: No Office license assigned that includes desktop apps | https://learn.microsoft.com/en-us/office/troubleshoot/activation/license-not-assigned'
   notes: Microsoft says one license can be installed on up to 5 devices and recommends sign out and sign in, checking the license assignment, and the activation troubleshooter.
+aliases:
+- unlicensed product
+- license not activated
+- software says not licensed
+- activation error
+- license key not working
+- office shows an unlicensed banner

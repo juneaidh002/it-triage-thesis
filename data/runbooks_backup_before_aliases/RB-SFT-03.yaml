@@ -1,0 +1,28 @@
+id: RB-SFT-03
+title: Software update fails
+category: Software install and licenses
+owner: Desktop support
+applies_when: Operating system or application update fails or loops
+pre_checks:
+- Device is connected to power and the internet
+- Enough free disk space (Microsoft lists about 20 GB free for a 64-bit upgrade)
+steps:
+- Restart the device and check for updates again
+- Run the Windows Update troubleshooter
+- Disconnect unneeded external devices and docks
+- Check the date and time are set automatically
+- Free disk space if low
+- Retry the update
+allowed_actions:
+- send_instructions
+escalate_if:
+- Update fails three times
+- Disk space cannot be freed
+- Device cannot boot normally
+- Error code points to a driver conflict
+auto_resolvable: true
+verification:
+  status: checked_official_docs
+  checked_against:
+  - 'Microsoft Support: Troubleshoot problems updating Windows | https://support.microsoft.com/help/10164'
+  notes: Steps follow Microsoft's update troubleshooting page. The 20 GB figure applies to upgrades and monthly updates may need less. Managed devices may restrict some of these actions.

@@ -1,0 +1,27 @@
+id: RB-NET-01
+title: Wi-Fi will not connect
+category: Wi-Fi and network
+owner: Network
+applies_when: Laptop cannot join the office Wi-Fi
+pre_checks:
+- Other devices connect to the same Wi-Fi
+- Wi-Fi is turned on
+steps:
+- Check Wi-Fi is on and Airplane mode is off
+- Forget the network and join it again
+- Check whether another device connects to the same network
+- If both bands are listed, try the other Wi-Fi band
+- Restart the laptop and check for updates
+- Use network reset only as the last step
+allowed_actions:
+- send_instructions
+- check_service_status
+escalate_if:
+- Only this device fails after all steps
+- Many users in the same area report the problem
+auto_resolvable: true
+verification:
+  status: checked_official_docs
+  checked_against:
+  - 'Microsoft Support: Fix Wi-Fi connection issues in Windows | https://support.microsoft.com/help/10741'
+  notes: Steps follow Microsoft's Wi-Fi troubleshooting page, including the test with another device and the note that network reset is a last resort.
