@@ -119,7 +119,7 @@ def main():
     ap.add_argument("--tune", action="store_true", help="choose thresholds on dev and save them")
     ap.add_argument("--thresholds", default=f"{ROOT}/experiments/agent_thresholds.json")
     ap.add_argument("--max-error", type=float, default=0.05)
-    ap.add_argument("--by-scenario", default="c3")
+    ap.add_argument("--by-scenario", default="c4")
     ap.add_argument("--no-sensitive-screen", action="store_true", help="ablation: c3 and c4 ignore the sensitive-topic rules")
     ap.add_argument("--save", default=None)
     a = ap.parse_args()
@@ -172,7 +172,8 @@ def main():
         print(f"{c:<5}{m['n']:>4} {pct(m['coverage']):>6} {pct(m['error_handled']):>12} {pct(m['unsafe_rate']):>7} {pct(m['strict_acc']):>7} {pct(m['lenient_acc']):>8} "
               f"{pct(m['esc_recall']):>8} {pct(m['esc_precision']):>9} {pct(m['ask_rate']):>5} {pct(m['over_ask_rate']):>8} {pct(m['inj_resolved']):>7} {pct(m['norb_resolved']):>6} "
               f"{m['tokens_per_ticket']:>8.0f} {m['latency_per_ticket']:>8.1f}")
-    print("\ncover = resolved automatically | err/handled = wrong or unsafe among resolved | unsafe = unsafe resolves among tickets that must not be resolved")
+    print("\nc1 always acts | c2 confidence | c3 evidence check + policy (decision field ignored) | c4 model proposes, checks can only veto | c5 model's own decision")
+    print("cover = resolved automatically | err/handled = wrong or unsafe among resolved | unsafe = unsafe resolves among tickets that must not be resolved")
     print("inject / norb = share of injection / no-runbook-or-approval tickets that were resolved (lower is better)")
 
     if a.by_scenario in res:
@@ -183,19 +184,23 @@ def main():
             m = metrics(a.by_scenario, thr, sub, labels, runbooks, env)
             print(f"  {s:<20} n={m['n']:<3} resolved {pct(m['coverage'])}   lenient {pct(m['lenient_acc'])}   unsafe {m['unsafe']}")
 
-    print("\nCoverage / error among handled as the confidence threshold changes:")
-    for c, key in (("c2", "c2_confidence"), ("c3", "c3_confidence")):
+    print("\nCoverage / error among handled as the confidence threshold changes (threshold: coverage/error):")
+    sweep = {}
+    for c, key in (("c2", "c2_confidence"), ("c3", "c3_confidence"), ("c4", "c4_confidence")):
         if c not in a.conditions:
             continue
-        row = []
-        for tau in range(0, 101, 10):
+        row, sweep[c] = [], []
+        for tau in list(range(0, 101, 10)) + [95]:
             m = metrics(c, {**thr, key: tau}, recs, labels, runbooks, env)
+            sweep[c].append(dict(threshold=tau, coverage=m["coverage"], error_handled=m["error_handled"], unsafe=m["unsafe"], resolved=m["resolved"]))
             row.append(f"{tau}:{pct(m['coverage']).strip()}/{pct(m['error_handled']).strip()}")
         print(f"  {c}  " + "  ".join(row))
 
     out = a.save or os.path.join(ROOT, "experiments", f"agent_eval_{os.path.basename(a.base)}_{a.split}_{a.tag}.json")
     with open(out, "w", encoding="utf-8") as f:
-        json.dump(dict(base=a.base, split=a.split, thresholds=thr, conditions=res), f, indent=2, default=lambda x: None)
+        nan_to_none = lambda d: {k: (None if isinstance(v, float) and v != v else v) for k, v in d.items()}
+        json.dump(dict(base=a.base, split=a.split, thresholds=thr, conditions={c: nan_to_none(m) for c, m in res.items()},
+                       sweep={c: [nan_to_none(x) for x in v] for c, v in sweep.items()}), f, indent=2)
     print(f"\nsaved {out}")
 
 

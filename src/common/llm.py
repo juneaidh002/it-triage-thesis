@@ -14,6 +14,25 @@ import yaml
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 CACHE = f"{ROOT}/experiments/llm_cache"
 
+_last_call = {}
+
+
+def _count_call(role, limit):
+    """Count one real API call for today; stop before the daily limit is exceeded."""
+    path = f"{ROOT}/experiments/usage_{time.strftime('%Y-%m-%d')}.json"
+    data = {}
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+    n = data.get(role, 0)
+    if limit and n >= limit:
+        raise RuntimeError(f"Daily budget reached for role '{role}': {n} real API calls today (limit {limit}). "
+                           "Cached results are kept. Run the same command again tomorrow.")
+    data[role] = n + 1
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f)
+
 
 def _load_dotenv(path=f"{ROOT}/.env"):
     """Read KEY=VALUE lines from .env (git-ignored) without overriding variables already set."""
@@ -88,7 +107,14 @@ def cached_call(models, role, system, user, refresh=False):
         with open(path, encoding="utf-8") as f:
             return json.load(f)["text"]
     t0 = time.time()
+    _count_call(role, r.get("max_requests_per_day"))
+    gap = r.get("min_interval_s", 0)
+    if gap:
+        wait = _last_call.get(role, 0) + gap - time.time()
+        if wait > 0:
+            time.sleep(wait)
     raw, usage = _with_retry(PROVIDERS[r["provider"]], r, system, user)
+    _last_call[role] = time.time()
     text = clean_text(raw)
     os.makedirs(CACHE, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:

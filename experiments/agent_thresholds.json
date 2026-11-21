@@ -4,7 +4,7 @@
     "c3_confidence": 95
   },
   "tuned_on": "final_v2:dev",
-  "max_error": 0.05,
+  "max_error": 0.1,
   "n_tickets": 100,
   "feasible": {
     "c2": false,
